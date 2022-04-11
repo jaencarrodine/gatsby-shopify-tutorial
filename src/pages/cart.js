@@ -1,54 +1,61 @@
-import React from 'react'
-import styled from "styled-components"
-
+/* eslint-disable camelcase */
+import React, {useState, useContext, useEffect} from 'react'
+import SEO from '../components/SEO'
+import CartItemList from '../components/CartItemList'
+import CartSummary from '../components/CartSummary'
+import CartContext from '../components/Context/CartContext'
+import SoldOut from '../components/SoldOut'
+import Layout from '../components/Layout'
+import {Container} from 'semantic-ui-react'
 import useStore from '../context/StoreContext'
 
-import Layout from '../components/layout'
-import Seo from "../components/seo"
-import ProductRow from '../components/ProductRow'
-import PrimaryButton from "../components/PrimaryButton"
 
-const Cart = () => {
-  const { cart, checkout } = useStore()
+import './index.css'
+import './cart.css'
+
+const Cart = ({location}) => {
+  const [soldOutActive, setSoldOutActive] = useState(false)
+  const { cart, checkout, loading } = useStore()
+  
+  useEffect(()=>{
+
+  },[])
+
+  function handleCheckout(){
+    window.open(checkout.webUrl, "_self")
+  }
 
   return (
-    <Layout>
-      <Seo title="My Cart" />
-      <Wrapper>
-        <HeaderWrapper>
-          <Text>Product</Text>
-          <Text>Quantity</Text>
-          <Text>Remove Item</Text>
-        </HeaderWrapper>
-        {
-          cart.length > 0 ? cart.map((item, index) => <ProductRow key={index} item={item} />) : <Text>Your cart is empty.</Text>
-        }
-        <ButtonWrapper>
-          <PrimaryButton text="Checkout" onClick={() => window.open(checkout.webUrl)} disabled={cart.length === 0} />
-        </ButtonWrapper>
-      </Wrapper>
-    </Layout>
+    <>
+      <SoldOut open={soldOutActive} setSoldOutActive={setSoldOutActive} />
+      <Layout location={location} open={soldOutActive} background={false}>
+        <SEO title="Cart" />
+        <div className = 'cart-container'>
+          <CartItemList
+            items={cart}
+            loading={loading}
+            
+            
+          
+          />
+        
+          <CartSummary
+            checkout = {checkout}
+            handleCheckout={handleCheckout}
+          />
+          
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      </Layout>
+    </>
   )
 }
 
 export default Cart
-
-const Wrapper = styled.div`
-  margin: 40px;
-`
-
-const HeaderWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 330px);
-  gap: 40px;
-`
-
-const Text = styled.p`
-  font-weight: 600;
-  font-size: 14px;
-`
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`

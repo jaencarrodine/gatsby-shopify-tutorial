@@ -1,0 +1,56 @@
+
+
+
+
+
+.desktop-menu{
+    width: 100%;
+ 
+    display: flex;
+    flex-direction: column;
+}
+.desktop-menu-tr{
+    margin-top: 30px;
+    height:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.desktop-menu-logo{
+    width:100%;
+    height: auto;
+}
+
+.desktop-menu-br{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 42%;
+    padding-right: 42%;
+    font-family: Century Gothic, CenturyGothic,  sans-serif;
+    text-decoration: none;
+    
+}
+
+.logo-link{
+    width:20%;
+    height:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-menu-link{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+   
+}
+
+#selected{
+    border-bottom: 1px solid #808080 ;
+}

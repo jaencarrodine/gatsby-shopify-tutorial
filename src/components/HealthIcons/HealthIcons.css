@@ -1,0 +1,49 @@
+.health-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+
+    margin: 0;
+    list-style: none;  
+
+    margin-left: 25%;
+
+
+}
+
+.health-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+
+}
+
+.health-icon-img{
+    width: 100px;
+    height: 100px;
+}
+
+.hi-title{
+    
+    font-weight: bold;
+    
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .health-icons{
+        width: 90%;
+        margin-left: 5%;
+        
+        
+    }
+    
+
+}

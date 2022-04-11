@@ -1,0 +1,220 @@
+.desc {
+  color: red;
+  margin-top: auto;
+}
+
+
+
+.empty-cart{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.empty-cart-header{
+  font-family: Century Gothic, CenturyGothic,sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.continue-shopping-button{
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  width: 230px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+
+  text-decoration-color: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cart-item-list-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: flex-end;
+}
+.cart-item-list-header-text{
+  font-family: Century Gothic, CenturyGothic,sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  display: flex;
+  
+}
+
+.back-to-shopping{
+  padding-bottom:13px
+}
+
+.bts-link{
+  margin-left: auto;
+}
+
+.continue-shopping-button:hover{
+  cursor: pointer;
+  background-color: #48acd6;
+  color: black;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.cart-item {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 200px;
+  border-top: solid 1px #bdbdbd;
+  
+}
+
+.cart-item-image-div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-image-link {
+  height: 100%;
+}
+
+.cart-item-image {
+  height: 100%;
+}
+
+.cart-item-info-name {
+  width: 30%;
+  height: 100%;
+  
+  padding-left: 0px;
+  padding-right: 5%;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ciif1{
+  font-size: 25px;
+  font-family: Century Gothic, CenturyGothic,sans-serif;
+  line-height: 1.1;
+}
+
+.ciif2{
+  margin-top: 10px;
+  color: gray;
+}
+
+.cart-item-info-quantity-div {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+
+.cart-item-info-quantity- {
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.cart-item-info-price {
+  width: 30%;
+  height: 100%;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: right;
+}
+
+.check-out-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 70px;
+  background-color: black;
+  color:white;
+}
+
+
+
+.cart-item-info-price-text {
+  font-size: 25px;
+  font-family: Century Gothic, CenturyGothic,sans-serif;
+  line-height: 1.1;
+}
+
+.cart-item-info-price-remove {
+  font-size: 14px;
+  text-decoration: underline;
+}
+.cart-item-info-price-remove:hover {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+  .back-to-shopping{
+
+    font-size: 14px;
+    
+  }
+  .cart-item-list-header-text{
+    font-size: 40px;
+  }
+
+  .cart-item-attributes{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 38%;
+  }
+  
+  .cart-item-info-name{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+  }
+  .ciif1{
+    font-size: 16px;
+  }
+
+  .ciif2{
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .cart-item-info-quantity-div{
+    width: 30%;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .cq-container{
+    width:100%;
+    
+  }
+  .cq-current{
+    width:50%;
+  }
+}

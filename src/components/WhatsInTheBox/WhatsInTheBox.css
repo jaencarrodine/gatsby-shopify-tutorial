@@ -1,0 +1,78 @@
+.witb-main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.witb-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  font-size: 60px;
+  color: white;
+}
+
+.witb-row {
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  max-height: 180px;
+  justify-content: center;
+  align-items: center;
+}
+
+.witb-row-text {
+  width: 8%;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+
+.witb-row-text-2 {
+  width: 16%;
+  line-height: 0.9;
+  color: white;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  font-size: 26px;
+}
+
+.witb-row-img-div {
+  width: 68%;
+}
+
+.witb-row-img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .witb-main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .witb-header {
+    font-size: 40px;
+  }
+  .witb-row {
+    padding-left: 5%;
+    padding-right: 5%;
+    max-height: 140px;
+  }
+
+  .witb-row-text {
+    font-size: 40px;
+  }
+  .witb-row-text-2 {
+    font-size: 18px;
+  }
+}

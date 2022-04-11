@@ -1,0 +1,82 @@
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.testimonials-header {
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  font-weight: 500;
+}
+
+.testimonial-stars {
+}
+
+.testimonials-star-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.testimonials-score {
+  font-size: 22px;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  text-align: center;
+  line-height: normal;
+
+  color: black;
+  padding-right: 5px;
+}
+
+.testimonials-star-text {
+  font-size: 15px;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  text-align: center;
+  line-height: normal;
+  color: black;
+}
+
+.testimonials-reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 30px;
+}
+
+.pp-testimonials-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials-reviews {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .pp-testimonials-reviews {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

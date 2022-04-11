@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Chivo:ital,wght@0,300;0,700;1,300&family=Roboto:wght@400;500&display=swap');
+
+.stepper-main{
+    
+
+}
+
+.stepper-step-label{
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+  
+}
+.sl:hover{
+    cursor: pointer;
+}
+.stepper-img{
+    height:175px;
+    width: auto;
+    
+
+}
+
+.stepper-subtitle{
+    margin-left: 32px;
+    font-family: 'Chivo', sans-serif;
+    font-style: italic;
+}
+
+.stepper-section{
+    margin-left: 32px;
+}       
+
+.stepper-section-header{
+    
+    line-height: normal;
+    font-size: 25px;
+    font-family: 'Chivo', sans-serif;
+    margin-top: 20px;
+    line-height: normal;
+}
+
+.stepper-section-body{
+    font-family: 'Chivo', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.stepper-section-body2{
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: normal;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .stepper-img{
+        height:80px;
+        margin-left: -16px;
+    }
+    .stepper-subtitle{
+        margin-left: 0px;
+    }
+    .stepper-section{
+        margin-left: 0px;
+    }
+
+    .stepper-section-header{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+}

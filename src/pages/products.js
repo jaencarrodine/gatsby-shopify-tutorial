@@ -1,11 +1,39 @@
 import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import ProductCard from "../components/ProductCard"
 
+import {useEffect, useState} from 'react'
+
+import Layout from '../components/Layout'
+import {graphql} from 'gatsby'
+import ProductList from '../components/ProductList'
+import SEO from '../components/SEO'
+import { Header} from 'semantic-ui-react'
+import './products.css'
+const products = require('../../lib/products')
+
+const Shop = ({location, data}) => {
+
+  const { nodes } = data.allShopifyProduct
+
+  console.log(nodes)
+
+  
+
+  
+
+  return (
+    <Layout location={location} background={false}>
+      
+      <SEO title={'Shop bender'} />
+
+      <ProductList products={products.productList}  nodes = {nodes}/>
+    </Layout>
+  )
+}
+
+export default Shop
+
+/*
 const Products = ({ data }) => {
 	const { nodes } = data.allShopifyProduct
 
@@ -18,12 +46,13 @@ const Products = ({ data }) => {
 		</Layout>)
 }
 
-export default Products
+export default Products*/
 
 export const query = graphql`
 	{
 		allShopifyProduct {
 			nodes {
+				id
 				title
 				handle
 				variants {
@@ -35,19 +64,8 @@ export const query = graphql`
 					}
 				}
 				description
-				images {
-					src
-				}
+				
 			}
 		}
 	}
-`
-
-const Wrapper = styled.div`
-	display: grid;
-	margin: 40px;
-	grid-template-columns: repeat(3, auto);
-	justify-content: left;
-	gap:40px;
-	max-width: 1234px;
 `

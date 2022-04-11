@@ -1,0 +1,20 @@
+.shop-header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Century Gothic, CenturyGothic,  sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .shop-header{
+        text-align: right;
+    }
+}

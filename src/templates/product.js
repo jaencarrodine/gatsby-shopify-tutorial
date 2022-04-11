@@ -31,6 +31,7 @@ const ProductTemplate = ({ pageContext }) => {
     </Layout>
   )
 }
+//
 
 export default ProductTemplate
 

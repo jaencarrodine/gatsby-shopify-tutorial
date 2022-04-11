@@ -1,0 +1,69 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0;
+
+
+
+}
+
+.benefits-block {
+  display: flex;
+  flex-direction: row;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.benefits-block-image {
+  width: 100px;
+  display: flex;
+  margin-right: 10px;
+  padding-top: 5px;
+  align-items: center;
+}
+
+.block-image {
+  margin-right: 0px;
+  width: 60px;
+  height: auto;
+}
+.benefit-head {
+  font-family: Century Gothic, CenturyGothic,  sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.benefit-text {
+  font-family: Century Gothic, CenturyGothic,  sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .benefits {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .benefits-block {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .benefit-head{
+    font-size: 2.8vh;
+  }
+  .benefit-text{
+    font-size: 1.8vh;
+  }
+}

@@ -1,0 +1,25 @@
+.PCR-card-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 9px;
+    background: #ececec;
+    box-shadow:  9px 9px 17px #c9c9c9,
+                -9px -9px 17px #ffffff;
+}
+
+
+
+.react-horizontal-scrolling-menu--wrapper ::-webkit-scrollbar{
+    display: none;
+}
+
+.PCR-card-br{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+} 
+.react-horizontal-scrolling-menu--scroll-container{
+    padding-top:30px;
+    padding-bottom:40px;
+}

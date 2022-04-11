@@ -2,11 +2,12 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-
-import Header from "./header"
+import Headroom from 'react-headroom'
+import Header from "./Header"
+import Footer from "./Footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,22 +20,22 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div className = 'bgwrap' style = {{backgroundColor: '#f4f1ec', backgroundSize: '100% 100%',}}>
+      <div className = 'header-container'>
+       
+          <Header location={location} />
+       
+      </div>
+
+      
       <div>
         <main>{children}</main>
-        <Footer>
-          <div>
-            © <a href="https://designcode.io/">Design+Code</a>, {new Date().getFullYear()}
-          </div>
-          <div>
-            Built with {" "}
-            <a href="https://www.gatsbyjs.com">Gatsby</a> and <a href="https://www.shopify.com">Shopify</a>
-          </div>
-          <div>
-            <a href="https://github.com/stephdiep/gatsby-shopify-tutorial">Source code</a>
-          </div>
-        </Footer>
+        <Footer/>
+          
+        
       </div>
+      </div>
+     
     </>
   )
 }
@@ -45,18 +46,3 @@ Layout.propTypes = {
 
 export default Layout
 
-const Footer = styled.footer`
-    padding: 40px;
-    font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 12px;
-    color: rgba(0,0,0,0.4);
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 40px;
-    width: fit-content;
-
-    a {
-      color: rgba(0,0,0,0.4);
-    }
-`

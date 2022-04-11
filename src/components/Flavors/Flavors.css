@@ -1,0 +1,44 @@
+.flavors-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+.img-row {
+}
+
+.flavors-img {
+  width: 100%;
+  height: auto;
+}
+
+.flavors-center-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  align-items: center;
+}
+
+.fct-1 {
+  font-size: 120px;
+  font-family: Century Gothic, CenturyGothic, sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .fct-1 {
+    font-size: 50px;
+  }
+
+  .flavors-center-text {
+    padding-top: 40px;
+  }
+}

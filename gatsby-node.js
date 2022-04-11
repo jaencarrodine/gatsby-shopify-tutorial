@@ -1,5 +1,5 @@
 const path = require(`path`)
-
+const { pageList } = require('./lib/basicPages')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allShopifyProduct {
         edges {
           node {
+            id
             title
             handle
             variants {
@@ -35,10 +36,21 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({
       path: `/products/${node.handle}`,
-      component: path.resolve(`./src/templates/product.js`),
+      component: path.resolve(`./src/templates/ProductPage.js`),
       context: {
         product: node,
       },
     })
   })
+
+  pageList.forEach(page => {
+    createPage({
+      path: `/${page.slug}`,
+      component: path.resolve(`./src/templates/basicPage.js`),
+      context: {
+        page
+      },
+    })
+  })
+
 }
